@@ -7,7 +7,7 @@ import * as z from "zod";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Icons } from "@/components/icons"
+import { Icons } from "@/components/utils/icons"
 import Link from "next/link";
 import {
   Form,

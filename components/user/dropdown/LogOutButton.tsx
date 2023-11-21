@@ -1,4 +1,4 @@
-import { DropdownMenuItem, DropdownMenuShortcut } from "./ui/dropdown-menu"
+import { DropdownMenuItem, DropdownMenuShortcut } from "../../ui/dropdown-menu"
 import deleteSessionCookie from "@/lib/server-actions/delete-session-cookie"
 import redirection from "@/lib/server-actions/redirect"
 

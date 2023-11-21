@@ -7,7 +7,7 @@ import * as z from "zod";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Icons } from "@/components/icons"
+import { Icons } from "@/components/utils/icons"
 import Link from "next/link";
 import {
   Form,
@@ -21,7 +21,7 @@ import {
 import { useState } from "react";
 import redirection from "@/lib/server-actions/redirect";
 import setSessionCookie from "@/lib/server-actions/set-session-cookie";
-import Callout from "./utils/Callout";
+import Callout from "../utils/Callout";
 
 const formSchema = z.object({
   username: z.string(),
