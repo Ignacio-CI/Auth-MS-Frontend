@@ -1,12 +1,10 @@
 import fetchData from "@/lib/server-actions/fetch-auth";
 import { UserNav } from "@/components/user/dropdown/UserNav"
 import { Search } from "../utils/Search";
-import updateUser from "@/lib/server-actions/update-user";
+import UpdatedUserButton from "./UpdateUserButton";
 
 
 export default function UserDashboard({ token }: { token: string }) {
-  
-  const updatedUser = updateUser({ token });
 
   return (
     <>
@@ -17,6 +15,7 @@ export default function UserDashboard({ token }: { token: string }) {
         </header>
         <div className="w-full h-32">
           <h2 className="text-black text-2xl font-bold mt-4 ml-4 dark:text-white">Dashboard</h2>
+          <UpdatedUserButton />
         </div>
       </div>
     </>

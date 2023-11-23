@@ -1,8 +1,14 @@
+'use server'
+
 import fetchData from "./fetch-auth";
 import deleteSessionCookie from "./delete-session-cookie";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
-export default async function updateUser({ token }: { token: string }) {
+export default async function updateUser() {
+  const cookieStore = cookies();
+  const token = cookieStore.get('token');
+
   const headers = {
     Authorization: `Bearer ${token}`,
   };
@@ -21,5 +27,5 @@ export default async function updateUser({ token }: { token: string }) {
     redirect("/signin");
   }
 
-  return { results }
+  return results.data.toString()
 }
